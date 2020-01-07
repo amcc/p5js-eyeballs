@@ -2,7 +2,7 @@ let xOffset = 0;
 let yOffset = 0;
 
 function setup() {
-  createCanvas(700, 700);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
