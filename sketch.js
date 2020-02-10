@@ -1,3 +1,4 @@
+// initial values to feed the purlin noise
 let xOffset = 0;
 let yOffset = 0;
 
@@ -8,8 +9,10 @@ function setup() {
 function draw() {
   background(220);
   noStroke();
-  fill(255);
-  circle(width / 4, height / 2, width / 3);
+  
+  //
+  //fill(255);
+  //circle(width / 4, height / 2, width / 3);
 
   let eyballXPoss1 = (noise(xOffset) * width) / 4 + width / 8;
   let eyballYPoss1 = (noise(yOffset) * height) / 4 + height / 2.6;
