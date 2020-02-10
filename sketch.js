@@ -9,28 +9,27 @@ function setup() {
 function draw() {
   background(220);
   noStroke();
-  
-  //
-  //fill(255);
-  //circle(width / 4, height / 2, width / 3);
 
-  let eyballXPoss1 = (noise(xOffset) * width) / 4 + width / 8;
-  let eyballYPoss1 = (noise(yOffset) * height) / 4 + height / 2.6;
+  // x/y positions for the pupils using perlin noise
+  let eyballXPos1 = (noise(xOffset) * width) / 4 + width / 8;
+  let eyballYPos1 = (noise(yOffset) * height) / 4 + height / 2.6;
 
-  let eyballXPoss2 = (noise(xOffset) * width) / 4 + (width * 5) / 8;
-  let eyballYPoss2 = (noise(yOffset) * height) / 4 + height / 2.6;
+  let eyballXPos2 = (noise(xOffset) * width) / 4 + (width * 5) / 8;
+  let eyballYPos2 = (noise(yOffset) * height) / 4 + height / 2.6;
 
+  // left eyeball
   fill(255);
   circle(width / 4, height / 2, width / 3);
   fill(0);
-  circle(eyballXPoss1, eyballYPoss1, width / 8);
+  circle(eyballXPos1, eyballYPos1, width / 8);
 
+  // right eyeball
   fill(255);
   circle((width * 3) / 4, height / 2, width / 3);
   fill(0);
-  circle(eyballXPoss2, eyballYPoss2, width / 8);
+  circle(eyballXPos2, eyballYPos2, width / 8);
 
+  // increment the purlin noise seed
   xOffset += 0.01;
   yOffset += 0.012;
-  //
 }
